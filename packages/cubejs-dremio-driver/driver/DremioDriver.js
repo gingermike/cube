@@ -246,6 +246,12 @@ class DremioDriver extends BaseDriver {
     console.log(q);
     return q;
   }
+
+  capabilities() {
+    return {
+      unloadWithoutTempTable: true
+    }
+  }
 }
 
 module.exports = DremioDriver;
